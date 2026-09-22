@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var speed = 500 # How fast the player will move (pixels/sec).
+@export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 func _ready():
 	screen_size = get_viewport_rect().size # is called when a node enters the scene tree, which is a good time to find the size of the game window:
@@ -20,7 +20,7 @@ func _process(delta):
 		$AnimatedSprite2D.play()
 	else:
 		$AnimatedSprite2D.stop()
-		
-	
+
 	position += velocity * delta
-	position = position.clamp(Vector2.ONE, (screen_size-Vector2.ONE))
+	var sprite_half_size = $AnimatedSprite2D.sprite_frames.get_frame_texture("up", 0).get_size() * $AnimatedSprite2D.scale / 2
+	position = position.clamp(sprite_half_size, screen_size - sprite_half_size)
