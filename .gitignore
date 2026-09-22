@@ -8,3 +8,44 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+# ==========================================
+# Godot 4.x Specific Ignores
+# ==========================================
+.godot/
+.nomedia/
+
+# ==========================================
+# Godot Engine Core Ignores
+# ==========================================
+# DO NOT ignore the .import/ folder itself, as it carries essential metadata!
+# We only ignore temporary/override configurations if needed.
+export.cfg
+export_credentials.cfg
+*.tmp
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# ==========================================
+# Mono / C# Specific Ignores (If using Godot .NET)
+# ==========================================
+.mono/
+data_*/
+mono_crash.*.json
+*.suo
+*.csproj
+*.sln
+
+# ==========================================
+# OS-Specific Garbage
+# ==========================================
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+._*
+
+# Linux
+*~
