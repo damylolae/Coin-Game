@@ -4,7 +4,7 @@ signal hit
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 func _ready():
-	hide()
+	#hide()
 	screen_size = get_viewport_rect().size # is called when a node enters the scene tree, which is a good time to find the size of the game window:
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
